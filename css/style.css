@@ -73,8 +73,6 @@ a{
 }
 
 .container{
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -177,7 +175,7 @@ main .headerPhoto{
   height: 704px;
 
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   main .headerPhoto {
   display: none ;
   }
@@ -212,7 +210,7 @@ main p{
   font-size: 2rem;
   color: var(--color-secondary);
 }
-@media (max-width: 992px){
+@media (max-width: 1200px){
   main .content {
     padding: 120px 5px;
   }
@@ -249,7 +247,7 @@ main p{
 /* start about section  */
 .about{
   padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 .about .container{
   display: flex;
@@ -279,10 +277,14 @@ main p{
   overflow: hidden;
   line-height: 1.8;
   font-size: 1.5rem;
-  text-align: justify; 
+
   color: var(--color-secondary);
   
 }
+@media (min-width: 1200px){
+  .about .container .textContent p{
+    text-align: justify; 
+  }}
 
 .about .container .textContent .contact{
   border: 3px solid var(--mainColor);
@@ -311,6 +313,7 @@ main p{
   }
   .about .container .textContent p{
     max-width: 100%;
+    font-size: 1.3rem;
   }
   .about .container .textContent .contact{
     position: absolute;
@@ -381,11 +384,15 @@ main p{
 }
 .cards .card .text p{
 color: white;
-text-align: justify;
 font-size: 1.1rem;
 line-height: 1.3;
 color: #E8E8E8;
-  
+}
+@media (min-width: 992px){
+  .cards .card .text p{
+    text-align: justify;
+  }
+
 }
 /* end about section  */
 
@@ -435,7 +442,7 @@ color: #E8E8E8;
   background-color: var(--mainColor);
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
   body{
     text-align: center;
   }
