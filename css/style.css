@@ -151,9 +151,111 @@ header li a:hover{
 header li a:hover::before{
   border: 1px solid var(--mainColor);
   width: 60%;
-
-
 }
+#menu{
+  display: none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+}
+#menu span{
+  display: block;
+  background-color: var(--mainColor);
+  width: 40px;
+  height: 3px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: var(--transition);
+  transform-origin: 0 0;
+  position: relative;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+#menu.is-active span:nth-child(1) {
+  transform:  translate(2px, -1px) rotate(48deg);
+  -webkit-transform:  translate(2px, -1px) rotate(48deg);
+  -moz-transform:  translate(2px, -1px) rotate(48deg);
+  -ms-transform:  translate(2px, -1px) rotate(48deg);
+  -o-transform:  translate(2px, -1px) rotate(48deg);
+}
+#menu.is-active span:nth-child(2) {
+      display: none;
+      }
+#menu.is-active span:nth-child(3) {
+        transform:  translate(0px, 15px) rotate(-47deg);
+        -webkit-transform:  translate(0px, 15px) rotate(-47deg);
+        -moz-transform:  translate(0px, 15px) rotate(-47deg);
+        -ms-transform:  translate(0px, 15px) rotate(-47deg);
+        -o-transform:  translate(0px, 15px) rotate(-47deg);
+}
+#menu.is-active span{
+  background-color: var(--mainColor);
+  }
+
+  @media (max-width: 1200px) {
+  body{
+    text-align: center;
+  }
+  .logo{
+    left: 0;
+    position: absolute;
+    top: 26px;
+    right: 11px;
+    width: 115px;
+    }
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header ul {
+  position: fixed;
+  background: var(--mainColor);
+  top: 105px;
+  left: 3rem;
+  right: 3rem ;
+  border-radius: 10px;
+  display: none;
+}
+header ul.is-active{
+    display: block;
+}
+header ul li{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+header li a{
+  color: black;
+}
+header li a:hover{
+    color: white;
+}
+header li a:hover::before{
+  border: 1px solid white;
+  width: 20%;
+}
+
+header .contact{
+  display: none;
+}
+#menu{
+  display: block;
+  top: 38px;
+  position: absolute;
+  z-index: 111;
+  left: 20px;
+}
+  }
 /* end header section  */
 /* start main section  */
 main{
@@ -241,7 +343,7 @@ main p{
 /* start about section  */
 .about{
   padding-top: 100px;
-  /* padding-bottom: 100px; */
+  padding-bottom: 100px;
 }
 .about .container{
   display: flex;
@@ -389,112 +491,6 @@ color: #E8E8E8;
 
 }
 /* end about section  */
-
-#menu{
-  display: none;
-  position: relative;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  user-select: none;
-}
-#menu span{
-  display: block;
-  background-color: var(--mainColor);
-  width: 40px;
-  height: 3px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: var(--transition);
-  transform-origin: 0 0;
-  position: relative;
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
-}
-#menu.is-active span:nth-child(1) {
-  transform:  translate(2px, -1px) rotate(48deg);
-  -webkit-transform:  translate(2px, -1px) rotate(48deg);
-  -moz-transform:  translate(2px, -1px) rotate(48deg);
-  -ms-transform:  translate(2px, -1px) rotate(48deg);
-  -o-transform:  translate(2px, -1px) rotate(48deg);
-}
-#menu.is-active span:nth-child(2) {
-      display: none;
-      }
-#menu.is-active span:nth-child(3) {
-        transform:  translate(0px, 15px) rotate(-47deg);
-        -webkit-transform:  translate(0px, 15px) rotate(-47deg);
-        -moz-transform:  translate(0px, 15px) rotate(-47deg);
-        -ms-transform:  translate(0px, 15px) rotate(-47deg);
-        -o-transform:  translate(0px, 15px) rotate(-47deg);
-}
-#menu.is-active span{
-  background-color: var(--mainColor);
-  }
-
-  @media (max-width: 1200px) {
-  body{
-    text-align: center;
-  }
-  .logo{
-    left: 0;
-    position: absolute;
-    top: 26px;
-    right: 11px;
-    width: 115px;
-    }
-
-header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-}
-
-header ul {
-  position: fixed;
-  background: var(--mainColor);
-  top: 105px;
-  left: 3rem;
-  right: 3rem ;
-  border-radius: 10px;
-  display: none;
-}
-header ul.is-active{
-    display: block;
-}
-header ul li{
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-}
-header li a{
-  color: black;
-}
-header li a:hover{
-    color: white;
-}
-header li a:hover::before{
-  border: 1px solid white;
-  width: 20%;
-}
-
-header .contact{
-  display: none;
-}
-#menu{
-  display: block;
-  top: 38px;
-  position: absolute;
-  z-index: 111;
-  left: 20px;
-}
-
-  }
 /* start our work section  */
 /* on mobile */
 .OurWork{
@@ -536,14 +532,14 @@ header .contact{
   word-wrap: break-word; 
   padding-bottom: 20px;
 }
-.OurWork .container .texticons h1{
+.container .texticons h1{
   display: inline-block;
   margin: 0;
 }
 .OurWork .container .texticons span{
   color: var(--mainColor);
 }
-.OurWork .container .texticons img{
+.container .texticons img{
   width: 25px;
 
 }
