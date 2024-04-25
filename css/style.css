@@ -454,9 +454,9 @@ main p{
   box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 13%), 0px 0px 2px 1px var(--mainColor)
 }
 
-.cards .card img{
+.about .cards .card img{
   background-color: white;
-  max-width: 62px;
+  max-width: 62px;  max-width: 62px;
   border-radius: 50%;
   border: 9px solid white;
   margin-left: 30px;
@@ -615,3 +615,61 @@ color: #E8E8E8;
 }
 
 /* end our work section  */
+/* start  services section  */
+.services{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #F0F0F0;
+}
+.services .text{
+  padding-bottom: 30px;
+}
+.services .container{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.services .container .text h1{
+  color: var(--mainColor);
+}
+.services .container .text p{
+  color: var(--color-secondary);
+}
+.services .container .text a{
+  color: var(--mainColor);
+  position: relative;
+
+}
+.services .container .text a::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 23px;
+  width: 0;
+  height: 1px;
+  background-color: var(--mainColor);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.services .container .text a:hover::before{
+  width: 100%;
+
+}
+.services .container .cards .card{
+  background-color: white;
+  z-index: -1;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+.services .container .cards .card h3{
+  color: var(--mainColor);
+}
+.services .container .cards .card img{
+  max-width: 50%;
+  padding-top: 1rem;
+}
+
+
+/* end  services section  */
+
