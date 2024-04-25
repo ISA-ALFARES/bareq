@@ -447,8 +447,8 @@ color: #E8E8E8;
     right: 11px;
     width: 115px;
     }
-  }
-  header{
+
+header{
     position: fixed;
     left: 0;
     top: 0;
@@ -500,18 +500,41 @@ header .contact{
 .OurWork{
   padding-top: 100px;
   padding-bottom: 100px;
+  background-color: #F0F0F0;
+  position: relative;
+  overflow: hidden;
+}
+.OurWork{
+  text-align: center;
+}
+.start-up{
+  width: 50px;
+  position: absolute;
+  left: -24px;
+  top: 181px;
+}
+.start-down{
+  width: 50px;
+  position: absolute;
+  bottom: 53px;
+  right: -25px;
+}
 
-}
-@media (max-width:992px){
-  
-}
-.OurWork .container{
-  
+.OurWork::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+  z-index: -3;
 }
 .OurWork .container .text p{
   color: var(--color-secondary);
   line-height: 1.7;
-  word-wrap: break-word; /* ضمان عدم تمدد النص خارج حاوية العنصر */
+  word-wrap: break-word; 
+  padding-bottom: 20px;
 }
 .OurWork .container .texticons h1{
   display: inline-block;
@@ -524,17 +547,21 @@ header .contact{
   width: 25px;
 
 }
+.OurWork .container .icons{
+  position: relative;
+}
 .OurWork .container .icons .icon img{
   width: 40px;
   border: 7px solid var(--mainColor);
   border-radius: 50%;
   background-color: var(--mainColor);
 }
-.OurWork .container .icons .tow{
-  margin-top: 40px;
-  margin-bottom: 40px;
+.OurWork  .icons .two{
+
+  position: relative;
 
 }
+
 .OurWork .container .icons .icon h3{
   color: var(--mainColor);
   font-size: 1.4 rem;
@@ -544,6 +571,51 @@ header .contact{
   color: var(--color-secondary);
   margin: 4px;
   line-height: 1.5;
+  padding: 1rem ;
+}
+@media (min-width:992px){
+  .start-up{
+    width: 100px;
+    position: absolute;
+    left: -50px;
+    top: 153px;
+  }
+  .start-down{
+    width: 100px;
+    position: absolute;
+    bottom: 22px;
+    right: -51px;
+  }
+  
+  .OurWork .container .icons{
+    display: flex;
+  }
+  .OurWork .container .text p{
+    padding-bottom: 100px;
+  }
+  .OurWork  .icons .two::after{
+    content: "";
+    position: absolute;
+    width: 144px;
+    left: 100%;
+    transform: translateX(-50%);
+    top: 27px;
+    border-style: dashed;
+    border-color: #7777777c;
+    border-width: 1px;
+  }
+  .OurWork  .icons .two::before{
+    content: "";
+    position: absolute;
+    width: 144px;
+    right: 67%;
+    transform: translateX(-50%);
+    top: 27px;
+    border-style: dashed;
+    border-color: #7777777c;
+    border-width: 1px;
+  }
+
 }
 
 /* end our work section  */
