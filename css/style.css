@@ -801,7 +801,7 @@ i.fa-solid.fa-arrow-left {
 
 /* end  services section  */
 /* start pricing  services section  */
-.pricing{
+/* .pricing{
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
@@ -953,8 +953,17 @@ text-align: left;
 .pricing .container .box a:hover{
   background-color: var(--main-color);
   color: white;
-}
-
+} */
 /* end pricing */
 
 
+/* start OurBusines drction  */
+.busines{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.busines .box img{
+  max-width: 100px;
+}
+/* end OurBusines drction  */
