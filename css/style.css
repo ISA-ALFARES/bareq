@@ -1021,14 +1021,14 @@ margin: 20px 20px 40px 20px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
 }
-@media (max-width:992px){
+@media (max-width:800px){
   .busines .cards ul{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 6px 12px;
   }
   .busines .cards ul li a{
-    width: 130px;
+    width: 144px;
     
   }
   .busines .box{
@@ -1199,17 +1199,78 @@ margin: 5px 5px;
 /* end conect section */
 /* start footer section */
 .footer{
-  padding-top: 50px;
+  padding-top: 20px;
   background-color: var(--mainColor);
   color: white;
 }
 .footer .container{
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
-  gap: 20px;
 }
 .footer .container .logo{
   background-color: white;
+  width: 72px;
+}
+.footer .container .box2 ,
+.footer .container .box3 ,
+.footer .container .box4 {
+  padding: 37px 25px 24px 0;
+}
+.footer .container .box2{
+  padding: 37px 100px 24px 0;
+}
+.footer .container p ,
+.footer .container li a{
+  color: #FFFFFF;
+  font-size: 15px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.footer  .footerLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px 0px 100px;
+}
+.footer  .footerLinks ul{
+  display: flex;
+  gap: 10px;
+}
+.footer  .footerLinks ul li:hover img{
+  color: white;
+  background-color: #0d8d898f;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 1px 0px 5px 4px #0d8d898f, 0px 0px 2px 3px var(--mainColor);
+  
+}
+.box4 .form {
+  position: relative;
+}
+.box4 .form input[type="email"]{
+  overflow: visible;
+  border: none;
+  padding: 20px;
+  padding-right: 100px;
+  border-radius: 20px;
+}
+.box4 .form input[type="submit"]{
+  position: absolute;
+  right: -28px;
+  padding: 5px;
+  width: 79px;
+  background-color: #72C6C3;
+  color: white;
+}
+.footer .container  h5{
+  margin: 10px 0 10px 0;
+  font-size: 1rem;
 }
 .footerLinks img{
   width: 25px;
