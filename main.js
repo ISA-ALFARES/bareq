@@ -18,3 +18,21 @@ window.addEventListener('scroll', function() {
     navbar.classList.remove('scrolled');
   }
 });
+
+
+
+
+
+// الوظيفة التي تفتح مربع الحوار وتعرض الصورة
+function openModal(imageUrl) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = imageUrl;
+}
+
+// الوظيفة التي تغلق مربع الحوار
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
