@@ -1021,7 +1021,7 @@ margin: 20px 20px 40px 20px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
 }
-@media (max-width:479px){
+@media (max-width:992px){
   .busines .cards ul{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -1040,4 +1040,162 @@ margin: 20px 20px 40px 20px;
 
 }
 /* end OurBusines drction  */
+.conect{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #F0F0F0;
+}
+@media (max-width:992px){
+  .conect{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* .conect::before{
+  margin: -181px;
+  content: "";
+  background-color: #72c6c3ab;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+} */
+.conect .icons h1{
+  margin: 0;
+  color:var(--mainColor);
+}
+.conect .icons{
+  padding: 20px;
+}
+.conect .icons p{
+  margin: 10px 10px 10px 0 ;
+  color: var(--color-secondary);
+  
+}
+
+.conect .icons .box{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+@media (max-width:992px){
+  .conect .icons .box{
+    display: block;
+  }
+  .conect .icons .box img{
+    width: 38px;
+    padding: 8px;
+  }
+}
+.conect .icons > :nth-child(3){
+  padding-top: 40px;
+}
+.conect .icons .box .text{
+  padding: 0 20px;
+}
+.conect .icons .box img{
+  width: 52px;
+  background-color: var(--mainColor);
+  padding: 13px;
+  border-radius: 50%;
+}
+@media (max-width:992px){
+  .conect .icons .box img{
+    width: 38px;
+    padding: 8px;
+  }
+}
+.conect .icons .box h3{
+  margin: 0;
+  color: var(--mainColor);
+
+}
+.conect .icons .box p{
+margin: 5px 5px;
+}
+
+
+
+
+ .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+} 
+@media(max-width:991px){
+   .form {
+    flex-basis: 100%;
+  }
+}
+
+ .form .input:focus{
+  outline: none;
+}
+ .form .input::placeholder{
+  transition: opacity var(--transition) ;
+  -webkit-transition: opacity var(--transition) ;
+  -moz-transition: opacity var(--transition) ;
+  -ms-transition: opacity var(--transition) ;
+  -o-transition: opacity var(--transition) ;
+}
+ .form .input:focus::placeholder{
+  opacity: 0;
+}
+ .form .input {
+    display: block;
+    width: 150%;
+    border: none;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    caret-color: var(--mainColor);
+    
+} 
+.discount .form textarea.input{
+  resize: none;
+  height: 200px;
+}
+ .form [type="submit"]{
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border: none;
+  background-color: var(--mainColor);
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+} 
+@media (max-width:992px){
+  .form .input{
+    display: inline;
+    margin: 0 40px;
+    width: 70%;
+    margin: 15px 0;
+  }
+  .form [type="submit"]{
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;  
+  }
+}
+ .form [type="submit"]:hover{
+  background-color: var(--color-secondary);
+} 
 
