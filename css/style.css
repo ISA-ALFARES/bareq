@@ -1040,6 +1040,7 @@ margin: 20px 20px 40px 20px;
 
 }
 /* end OurBusines drction  */
+/* start conect section */
 .conect{
   display: flex;
   justify-content: center;
@@ -1118,9 +1119,6 @@ margin: 20px 20px 40px 20px;
 margin: 5px 5px;
 }
 
-
-
-
  .form {
   display: flex;
   align-items: center;
@@ -1198,4 +1196,23 @@ margin: 5px 5px;
  .form [type="submit"]:hover{
   background-color: var(--color-secondary);
 } 
+/* end conect section */
+/* start footer section */
+.footer{
+  padding-top: 50px;
+  background-color: var(--mainColor);
+  color: white;
+}
+.footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+  gap: 20px;
+}
+.footer .container .logo{
+  background-color: white;
+}
+.footerLinks img{
+  width: 25px;
+}
+/* end footer section */
 
