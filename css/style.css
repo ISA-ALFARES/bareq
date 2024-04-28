@@ -199,10 +199,13 @@ header li a:hover::before{
   }
 
   @media (max-width: 1200px) {
-  body{
+    .about ,
+    .OurWork,
+    .services,
+    .busines{
     text-align: center;
   }
-  .logo{
+header .logo{
     left: 0;
     position: absolute;
     top: 26px;
@@ -215,6 +218,7 @@ header{
     left: 0;
     top: 0;
     right: 0;
+    z-index: 4;
 }
 
 header ul {
@@ -512,7 +516,7 @@ color: #E8E8E8;
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #F0F0F0;
-  /* position: relative; */
+  position: relative;
   overflow: hidden;
 }
 .OurWork{
@@ -680,7 +684,7 @@ color: #E8E8E8;
 
 }
 .services .container .cards .card{
-  /* position: relative; */
+  position: relative;
   background-color: white;
   box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
   transition: var(--transition);
@@ -1021,10 +1025,10 @@ margin: 20px 20px 40px 20px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
 }
-@media (max-width:800px){
+@media (max-width:867px){
   .busines .cards ul{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
     gap: 6px 12px;
   }
   .busines .cards ul li a{
@@ -1119,34 +1123,34 @@ margin: 20px 20px 40px 20px;
 margin: 5px 5px;
 }
 
- .form {
+ .forms {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-basis: 50%;
 } 
 @media(max-width:991px){
-   .form {
+   .forms {
     flex-basis: 100%;
   }
 }
 
- .form .input:focus{
+ .forms .input:focus{
   outline: none;
 }
- .form .input::placeholder{
+ .forms .input::placeholder{
   transition: opacity var(--transition) ;
   -webkit-transition: opacity var(--transition) ;
   -moz-transition: opacity var(--transition) ;
   -ms-transition: opacity var(--transition) ;
   -o-transition: opacity var(--transition) ;
 }
- .form .input:focus::placeholder{
+ .forms .input:focus::placeholder{
   opacity: 0;
 }
- .form .input {
+ .forms .input {
     display: block;
-    width: 150%;
+    width: 140%;
     border: none;
     margin-bottom: 25px;
     border-bottom: 1px solid #ccc;
@@ -1155,11 +1159,11 @@ margin: 5px 5px;
     caret-color: var(--mainColor);
     
 } 
-.discount .form textarea.input{
+.discount .forms textarea.input{
   resize: none;
   height: 200px;
 }
- .form [type="submit"]{
+ .forms [type="submit"]{
   display: block;
   border-radius: 10px;
   width: 100%;
@@ -1181,19 +1185,19 @@ margin: 5px 5px;
   -o-border-radius: 10px;
 } 
 @media (max-width:992px){
-  .form .input{
+  .forms .input{
     display: inline;
     margin: 0 40px;
     width: 70%;
     margin: 15px 0;
   }
-  .form [type="submit"]{
+  .forms [type="submit"]{
     width: 70%;
     margin: 20px auto;
     padding: 10px;  
   }
 }
- .form [type="submit"]:hover{
+ .forms [type="submit"]:hover{
   background-color: var(--color-secondary);
 } 
 /* end conect section */
@@ -1207,33 +1211,82 @@ margin: 5px 5px;
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
 }
-.footer .container .logo{
+@media (max-width:1200px) {
+  .footer .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
+.footer  .logo{
   background-color: white;
   width: 72px;
+  margin: 22px 0px 0px 0px;
+}
+
+.box1 p {
+  line-height: 1.5;
+  width: 341px;
+  text-align: justify;
+  color: #EEEEEE;
+}
+@media (max-width:1200px){
+  .box1 p{
+    line-height: 2;
+    width: 90%;
+    padding: 0 23px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 .footer .container .box2 ,
 .footer .container .box3 ,
 .footer .container .box4 {
   padding: 37px 25px 24px 0;
 }
+
 .footer .container .box2{
-  padding: 37px 100px 24px 0;
+  padding: 37px 120px 24px 0;
+}
+@media (max-width:1200px){
+  .footer .container .box2 ,
+.footer .container .box3 ,
+.footer .container .box4 {
+  padding: 10px;
+  border: 1px solid #eeeeee1a;
+}
 }
 .footer .container p ,
 .footer .container li a{
-  color: #FFFFFF;
+  color: #EEEEEE;
   font-size: 15px;
+  margin-bottom: 10px;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
 }
+.footer .container li a{
+  line-height: 40px;
+}
+.box1 h5{
+  color: #EEEEEE ;
+}
+.footer .container li a:hover{
+  color: black;
+}
 .footer  .footerLinks{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 100px 0px 100px;
+}
+@media (max-width:992px){
+  .footer  .footerLinks{
+    flex-direction: column;
+  }
 }
 .footer  .footerLinks ul{
   display: flex;
@@ -1248,6 +1301,7 @@ margin: 5px 5px;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   box-shadow: 1px 0px 5px 4px #0d8d898f, 0px 0px 2px 3px var(--mainColor);
+
   
 }
 .box4 .form {
@@ -1255,18 +1309,64 @@ margin: 5px 5px;
 }
 .box4 .form input[type="email"]{
   overflow: visible;
+  width: 100%;
   border: none;
-  padding: 20px;
-  padding-right: 100px;
-  border-radius: 20px;
+  font-size: 14px;
+  padding: 20px 82px 20px 0px;
+  border-radius: 30px;
 }
 .box4 .form input[type="submit"]{
   position: absolute;
-  right: -28px;
-  padding: 5px;
-  width: 79px;
+  padding: 10px;
+  right: 3px;
+  width: 71px;
   background-color: #72C6C3;
   color: white;
+  border: none;
+  border-radius: 30px;
+  top: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+  @media  (min-width:900px) and (max-width:1200px){
+  
+  .box4 .form input[type="email"]{
+    width: 50%;
+    padding: 20px 183px 20px 0px;
+  }
+  .box4 .form input[type="submit"]{
+    top: 13px;
+    width: 69px;
+    right: 28%;
+  }
+}
+.subscribe form input[type="submit"]:hover {
+  background-color: var(--color-secondary);
+}
+.subscribe form input[type="email"]:focus {
+  outline: none;
+}
+.subscribe form input[type="email"]::placeholder {
+  transition: opacity var(--transition);
+  -webkit-transition: opacity var(--transition);
+  -moz-transition: opacity var(--transition);
+  -ms-transition: opacity var(--transition);
+  -o-transition: opacity var(--transition);
+}
+.subscribe form input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+@media (max-width:1300) {
+  .box4 .form{
+    display: flex;
+    flex-direction: column !important;
+  }
+
 }
 .footer .container  h5{
   margin: 10px 0 10px 0;
