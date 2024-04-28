@@ -22,13 +22,34 @@ window.addEventListener('scroll', function() {
 
 
 
-  function filterWorks(category, link) {
+  // function filterWorks(category, link) {
+  //   var links = document.querySelectorAll('.links a');
+  //   links.forEach(function(link) {
+  //     link.classList.remove('active');
+  //   });
+
+  //   link.classList.add('active');
+
+  //   var cards = document.querySelectorAll('.box img');
+  //   cards.forEach(function(card) {
+  //     var categoryClass = card.getAttribute('data-category');
+  //     if (category === 'all' || category === categoryClass) {
+  //       card.style.display = 'block';
+  //     } else {
+  //       card.style.display = 'none';
+  //     }
+  //   });
+  // }
+
+  function filterWorks(category) {
+    // Remove 'active' class from all links
     var links = document.querySelectorAll('.links a');
     links.forEach(function(link) {
       link.classList.remove('active');
     });
 
-    link.classList.add('active');
+    // Add 'active' class to the clicked link
+    event.target.classList.add('active');
 
     var cards = document.querySelectorAll('.box img');
     cards.forEach(function(card) {
