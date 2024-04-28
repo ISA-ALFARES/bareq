@@ -12,7 +12,7 @@ action.classList.toggle("is-active")
 
 window.addEventListener('scroll', function() {
   var navbar = document.getElementById('header');
-  if (window.scrollY > 200) { // التمرير إلى 50 بكسل
+  if (window.scrollY > 200) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
@@ -22,17 +22,21 @@ window.addEventListener('scroll', function() {
 
 
 
+  function filterWorks(category, link) {
+    var links = document.querySelectorAll('.links a');
+    links.forEach(function(link) {
+      link.classList.remove('active');
+    });
 
-// الوظيفة التي تفتح مربع الحوار وتعرض الصورة
-function openModal(imageUrl) {
-  var modal = document.getElementById("myModal");
-  var modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = imageUrl;
-}
+    link.classList.add('active');
 
-// الوظيفة التي تغلق مربع الحوار
-function closeModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
+    var cards = document.querySelectorAll('.box img');
+    cards.forEach(function(card) {
+      var categoryClass = card.getAttribute('data-category');
+      if (category === 'all' || category === categoryClass) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
