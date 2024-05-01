@@ -289,10 +289,11 @@ header .contact{
   }
 /* end header section  */
 /* start main section  */
-main{
-  padding-bottom: 100px;
+@media (min-width:1200px){
+  main{
+    padding-bottom: 100px;
+  }
 }
-
 main .headerPhoto{
   position: absolute;
   left: 0;
@@ -302,13 +303,20 @@ main .headerPhoto{
   height: 704px;
 
 }
+main .content{
+  padding: 250px 50px;
+}
 @media (max-width: 1200px) {
   main .headerPhoto {
   display: none ;
   }
-}
-main .content{
-padding: 250px 50px;
+  main{
+    margin-bottom: 10px;
+  }
+  main .content{
+    padding: 150px 50px;
+
+  }
 }
 @media (max-width: 992px){
   main {
@@ -358,17 +366,34 @@ main p{
     display: none;
   }
 }
-
 /* end main section  */
 /* start partners section  */
-.partners .partner{
-  width: 100%;
-}
 .partners .starIcont{
   width: 200px;
   position: absolute;
   right: -104px;
   bottom: -116px;
+}
+.partners .images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.partners .partner{
+  width: 150px;
+}
+.partners .starIcont {
+  width: 100px;
+  right: -50px;
+  bottom: 0px;
+}
+@media (max-width:992px){
+  .partners .starIcont {
+    width: 67px;
+    right: -34px;
+    bottom: 556px;
+  }
 }
 /* end partners section  */
 /* start about section  */
@@ -482,6 +507,9 @@ main p{
     left: 30%;
     width: 38%;
 }
+.cards .one{
+  margin-top: 200px;
+}
 }
 @media (max-width:600px){
   .about .container .textContent .contact{
@@ -489,15 +517,6 @@ main p{
     width: 65% !important;
 
 }
-  
-}
-.cards .one{
-  margin-top: 200px;
-}
-.partners .starIcont {
-  width: 67px;
-  right: -34px;
-  bottom: 444px;
   
 }
 
@@ -1110,6 +1129,7 @@ margin: 20px 20px 40px 20px;
   background-color: var(--mainColor);
   color: white;
 }
+
 
 .busines .cards ul li .active{
   background-color: var(--mainColor);
