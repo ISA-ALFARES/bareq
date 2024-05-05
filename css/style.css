@@ -1,4 +1,5 @@
 /* start global roles */
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1660,3 +1661,100 @@ color: var(--color-secondary);
   width: 25px;
 }
 /* end footer section */
+
+
+
+/* تحسين تأثير الانميشن */
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="new-animation"].aos-animate {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  [data-aos="new-animation"] {
+    transform: translateY(150px);
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    -o-transform: translateY(150px);
+}
+
+  [data-aos="new-animation"].aos-animate {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+}
+@media screen and (min-width: 768px) {
+  [data-aos="new-animation"] {
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+}
+
+  [data-aos="new-animation"].aos-animate {
+    transform: translatex(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+
+
+
+
+
+
+[data-aos="tightToLeft"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="tightToLeft"].aos-animate {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  [data-aos="tightToLeft"] {
+    transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+}
+
+  [data-aos="tightToLeft"].aos-animate {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+}
+@media screen and (min-width: 768px) {
+  [data-aos="tightToLeft"] {
+    transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+}
+
+  [data-aos="tightToLeft"].aos-animate {
+    transform: translatex(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
