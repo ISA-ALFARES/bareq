@@ -14,14 +14,14 @@ action.classList.toggle("is-active")
 }
 
 
-  window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('header');
-    if (window.scrollY > 200) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  // window.addEventListener('scroll', function() {
+  //   var navbar = document.getElementById('header');
+  //   if (window.scrollY > 200) {
+  //     navbar.classList.add('scrolled');
+  //   } else {
+  //     navbar.classList.remove('scrolled');
+  //   }
+  // });
 
 
 
