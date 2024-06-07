@@ -1,3 +1,1 @@
-# bareq
-
-https://www.bareeqfekra.sa
+# https://www.bareeqfekra.sa
